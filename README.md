@@ -1,7 +1,7 @@
 # <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Вопросы: Неделя 2!<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
 - [RecyclerView](#recyclerview)
-  - [Разница от ListView](#разница-от-listview)
-  - [Чем отличается LinearLayout от RecycleView если оба использовать как отображение списка?](#Чем-отличается-LinearLayout-от-RecycleView-если-оба-использовать-как-отображение-списка?)
+  - [В чем разница между RecyclerView и ListView в Android](#В чем разница между RecyclerView и ListView в Android)
+  - [Чем отличается LinearLayout от RecycleView если оба использовать как отображение списка?](#чем-отличается-linearlayout-от-recycleView-если-оба-использовать-как-отображение-списка?)
   - [Паттерны Adapter и ViewHolder](#Паттерны-Adapter-и-ViewHolder)
   - [diffutil](#diffutil)
   - [delegate RV](#delegate-RV)
