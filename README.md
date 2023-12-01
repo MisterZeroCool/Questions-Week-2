@@ -8,6 +8,19 @@
 - [Fragments](#fragments)
 - Что такое фрагмент?
 - Жизненный цикл фрагмента
+- Как передаются параметры между фрагментами черуз ViewModel?
+- Расскажите про способы добавления и переключения фрагментов. Как работать с бэкстэком?
+- Как передать параметры в конструктор фрагменты?
+- Почему нельзя передавать параметры через конструктор фрагмента?
+- Метод FragmentManager.commit() – синхронный или нет?
+- обязан ли фрагмент layout?(нет)
+- Как получить ссылку на фрагмент из активити?
+- Чем отличается tag в методах add() и addToBackStack()?
+- Как правильно подписываться на LiveData во фрагментах?
+- Как определить скрыт ли на данный момент фрагмент?
+- Фрагмент является налседником Context?(не является)
+- Для чего нужен метод Fragment.setRetainInstance()?
+- Что происходит с фрагментом при повороте экрана?
 - [FragmentManager](#FragmentManager)
 
 
@@ -80,7 +93,7 @@ private fun showList(list: List(ShopItem>){
 Этим объектом является `Adapter`.
 
 
-
+### Жизненный цикл фрагмента
 <h3 align="center"><strong>Fragment Lifecycles</strong></h3>
 <p align="center">
   <img src="https://developer.android.com/static/images/guide/fragments/fragment-view-lifecycle.png" alt="Preview">
