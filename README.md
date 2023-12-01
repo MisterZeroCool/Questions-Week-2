@@ -83,7 +83,7 @@ private fun showList(list: List(ShopItem>){
 
 <h3 align="center"><strong>Fragment Lifecycles</strong></h3>
 <p align="center">
-  <img src="https://developer.android.com/static/images/guide/fragments/fragment-view-lifecycle.png" alt="Preview"">
+  <img src="https://developer.android.com/static/images/guide/fragments/fragment-view-lifecycle.png" alt="Preview">
 </p>
 ###
 ###
