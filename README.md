@@ -6,6 +6,8 @@
   - [diffutil](#diffutil)
   - [delegate RV](#delegate-RV)
 - [Fragments](#fragments)
+- Что такое фрагмент?
+- Жизненный цикл фрагмента
 - [FragmentManager](#FragmentManager)
 
 
@@ -77,7 +79,7 @@ private fun showList(list: List(ShopItem>){
 - как устанавливать значения внутри View 
 Этим объектом является `Adapter`.
 
-###
+src="https://developer.android.com/static/images/guide/fragments/fragment-view-lifecycle.png" width="30px">
 ###
 ###
 ###
