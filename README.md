@@ -96,7 +96,7 @@ private fun showList(list: List(ShopItem>){
 ### Жизненный цикл фрагмента
 <h3 align="center"><strong>Fragment Lifecycles</strong></h3>
 <p align="center">
-  <img src="https://developer.android.com/static/images/guide/fragments/fragment-view-lifecycle.png" weight = "30" alt="Preview">
+  <img src="https://developer.android.com/static/images/guide/fragments/fragment-view-lifecycle.png" weight = "20" alt="Preview">
 </p>
 
 Часть методов жизненного цикла фрагмента аналогична методам жизненного цикла активити.
