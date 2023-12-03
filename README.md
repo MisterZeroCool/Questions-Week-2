@@ -3,7 +3,7 @@
 
 - [RecyclerView](#recyclerview)
   - [AV Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?](#av)
-  - [AV Назначение](#av_назначение)    
+  - [AV asd](#av_asd)    
   - [Разница от ListView?](#разница)
   - [Чем отличается LinearLayout от RecycleView если оба использовать как отображение списка?](#чем-отличается-linearlayout-от-recycleView-если-оба-использовать-как-отображение-списка?)
   - [Паттерны Adapter и ViewHolder](#Паттерны-Adapter-и-ViewHolder)
@@ -44,7 +44,7 @@
 
 # RecyclerView<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
 
-### AV Назначение
+### AV asd
 
 Android RecyclerView — это компонент пользовательского интерфейса, предназначенный для эффективного отображения больших наборов данных. Он повышает производительность за счет повторного использования представлений, уменьшения использования памяти и увеличения скорости прокрутки.
 
