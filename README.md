@@ -2,13 +2,14 @@
 # Содержание
 
 - [RecyclerView](#recyclerview)
-  - [Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?](#назначение) 
+  - [Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?](#назначение_и_ключевые_функции_android_recyclerview_и_почему_это_важно_для_разработки_современных_приложений_для_android) 
   - [Разница от ListView?](#разница)
   - [Чем отличается LinearLayout от RecycleView если оба использовать как отображение списка?](#чем-отличается-linearlayout-от-recycleView-если-оба-использовать-как-отображение-списка?)
   - [Паттерны Adapter и ViewHolder](#Паттерны-Adapter-и-ViewHolder)
   - [diffutil](#diffutil)
   - [delegate RV](#delegate-RV)
   - Server Driven UI
+
 - [Fragments](#fragments)
   - Что такое фрагмент(фраг может исполь в нескольких фрагмертами)?
   - Жизненный цикл фрагмента
