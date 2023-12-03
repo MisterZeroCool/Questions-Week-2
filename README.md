@@ -2,7 +2,7 @@
 # Содержание
 
 - [RecyclerView](#recyclerview)
-  - [AV Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?](#av)  
+  - [AV Н?](#av)  
   - [Разница от ListView?](#разница)
   - [Чем отличается LinearLayout от RecycleView если оба использовать как отображение списка?](#чем-отличается-linearlayout-от-recycleView-если-оба-использовать-как-отображение-списка?)
   - [Паттерны Adapter и ViewHolder](#Паттерны-Adapter-и-ViewHolder)
