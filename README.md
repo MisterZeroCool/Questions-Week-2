@@ -10,6 +10,11 @@
   - [diffutil](#diffutil)
   - [delegate RV](#delegate-RV)
   - Server Driven UI
+  - 
+  
+- [Fragments](#fragments)
+
+   - [Q1](#q1) Что такое фрагмент и для чего он нужен?
 
 
 
@@ -205,6 +210,295 @@ findFragmentById() принимает параметром id фрагмента
 -  фрагмент можно создать напрямую, в отличии от activity
 
 [Содержание](#содержание)
+
+
+# Fragments
+ 
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px"> Q1
+ ### Что такое фрагмент и для чего он нужен?
+
+`Fragment` —  используется для отображения части UI на экране. Фрагмент создается внутри активити или внутри другого фрагмента. Фрагмент является модульным компонентом и один и тот же фрагмент можно встроить в две разные активности. Класс-наследник класса Fragment должен иметь дефолтный конструктор без параметров. Система использует этот конструктор при пересоздании фрагмента.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q2 Как создать Fragment?
+ Чтобы создать `Fragment` необходимо создать класс наследующий `Fragment` и переопределить в нем метод `onCreateView`, или можно создать класс наследующий `Fragment AndroidX` и передать в базовый конструктор (конструктор родителя) ресурс макета (layout).
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q3 Расскажите что такое `FragmentManager`?
+ Это класс, отвечающий за выполнение действий над фрагментами нашего приложения, таких как:
+
+ - добавление
+ - удаление
+ - замена
+
+ А также добавление их в backStack.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q4 Расскажите про способы добавления и переключения фрагментов.
+
+ Для управления фрагментами используются два класса: `FragmentManager` и `FragmentTransaction`.
+ 
+- `supportFragmentManager` - это метод `Activity` используется для получения фрагмента.
+
+- `getChildFragmentManager` - это метод `Fragment` используется для получения фрагмента.
+
+`FragmentManager` начинает транзакцию и возвращает объект `FragmentTransaction` вызовом метода `beginTransaction()`.
+
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q5 Расскажите какие методы есть у класса `FragmentTransaction`:
+- `add()`- добавляет фрагмент на активити или другой фрагмент.
+- `remove()`- удаляет фрагмент.
+- `replace()`- удаляет все фрагменты, добавленные методом `add()` в заданный контейнер, и добавляет переданный аргументом фрагмент в контейнер.
+- `hide`- делает фрагмент невидимым.
+- `show`- отображает фрагмент.
+
+### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q6 Как работать с бэкстэком?
+
+-для работы с бэкстеком используются следующие методы:
+- `addToBackStack`-добавляет транзакцию в Back Stack. Это значит, что когда пользователь нажмет Back, транзакция откатится. Применяется ко всем операциям в транзакции.
+- `popBackStack`-удаляет транзакцию с верхушки бэкстэка, возвращает `true`, если бэкстэк хранил хотя бы одну транзакцию.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q7 Как отобразить фрагмент на `Activity`?
+ Для отображения фрагментов на `Activity`, ее макет должен иметь у себя `FragmentContainerView`, который будет служить контейнером фрагментов.
+
+ В xml файле фрагмента назначаем `id` для нашей Activity:
+
+ ```xml
+ <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/host"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+ ```
+
+В классе `MainActivity` прописываем код для отображения фрагмента:
+
+```kotlin
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        supportFragmentManager
+            .beginTransaction().apply {
+                replace(R.id.host, MainScreenFragment())
+            }.commit()
+    }
+}
+```
+
+
+- `beginTransaction` - это метод используется для добавления, замены или удаления фрагментов.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q8 Как получить ссылку на фрагмент из `Activity`?
+
+ Системное API предоставляет два метода для поиска и получения фрагмента внутри активити:
+ - `findFragmentByTag()` принимает параметром тег, который передается в методе `add()` или `replace()` или в XML в элементе `FragmentContainerView`. 
+ - `findFragmentById()` принимает параметром `id` фрагмента.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q9 Завершающие методы `FragmentTransaction`
+
+ - `commit` - добавляет транзакцию в очередь UI потока и транзакция выполняется при первой возможности. Является асинхронным, т.е. транзакция не выполняется во время вызова метода.
+- `commitNow` - противоположность commit. Является синхронным, т.е. транзакция выполняется во время вызова метода. При работе с данным методом нельзя использовать `addToBackStack`.
+- `commitAllowingStateLoss` - делает то же, что и метод `commit`, но говорит системе, что мы готовы к потере состояния и исключение бросать не нужно. Замалчивает, а не решает проблему. Является асинхронным. Не рекомендуется использовать.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q10 Что за методы `parentFragmentManager`, `childFragmentManager`?
+
+ - `parentFragmentManager` - `FragmentManager` родителя.
+- `childFragmentManager` - `FragmentManager` текущего фрагмента.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q11 Опишите жизненный цикл фрагмента
+
+- Жизненный цикл Fragment
+  - ![Жизненный цикл фрагмента](https://i.stack.imgur.com/fRxIQ.png)
+
+
+## CREATED
+- `onAttach()`–вызывается когда фрагмент присоединяется к активити. С этого момента мы можем получить ссылку на контекст.
+- `onCreate()`–вызывается когда фрагмент создается. В этом методе можно получить сохраненное состояние savedInstanceState типа Bundle.
+- `onCreateView()`–фрагмент создает представление (View). Устанавливается какой именно визуальный интерфейс будет у фрагмента.
+- `onViewCreated()`–вызывается после создания представления фрагмента (view). В этом методе можно работать с элементами view.
+- onViewStateRestored()`–позволяет получить состояние фрагмента.
+## STARTED
+- `onStart()`–вызывается, когда фрагмент становится видим пользователю, после `Activity.onStart()`.
+## RESUMED
+-`onResume()`–вызывается когда фрагмент становится доступен для взаимодействия с пользователем, после `Activity.onResume()`.
+## PAUSED
+-`onPause()`–пользователь не может взаимодействовать с фрагментом, но часть фрагмента видима пользователю.
+## STOPED
+- `onStop()`– фрагмент становится не видим пользователю.
+- `onSaveInstanceState()`-позволяет сохранить состояние фрагмента. До API 28 вызывался до onStop, начиная с API 28 после onStop.
+## DESTROYED
+- `onDestroyView()` – уничтожает представление (view) фрагмента.
+- `onDestroy()` – уничтожает фрагмент.
+- `onDetach()` – вызывается, когда фрагмент удаляется из FragmentManager и открепляется от активити.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q11 FragmentResultApi
+
+ Функционал, который позволяет возвращать результат из фрагмента.
+ - `setFragmentResult("requestKey",bundleOf("bundleKey" to result))` - метод для отправки результата в другой фрагмент
+ - `setFragmentResultListener("requestKey"){_,bundle -> result=bundle.getString("bundleKey")}` - метод для получения результата из другого фрагмента.
+
+Если оба фрагмента находятся в одном и том же FragmentManager, то мы должны использовать `parentFragmentManager`. Если у нас фрагмент вложен в другой фрагмент, то для передачи данных мы используем `childFragmentManager`. Важно понимать, что наш `FragmentResultListener` должен находиться в общем для двух фрагментов `FragmentManager`-е.
+
+Если какой-либо фрагмент подписывается на результат методом `setFragmentResultListener` после того, как отправляющий фрагмент вызовет `setFragmentResult`, то он немедленно получит результат. Каждую связку `"Key+Result(Bundle)"` фрагмент получает только 1 раз. Фрагменты которые находятся в бек стеке получат результат только после того как перейдут в состояние `STARTED`. После того как фрагмент перейдет в состояние `DESTROYED` мы больше не сможем подписываться на `ResultListener`.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q12 Multi-backstack
+Используется для сохранения `backstack` при переходах между вкладками. Для работы необходимо:
+- `setReorderingAllowed(true)`
+- `FragmentTransaction.addToBackStack(String?)` - указать уникальные имена.
+- под каждый `parentFragment` добавить таб (Tablayout) и при переходе внутри этих фрагментов, будем сохранять и восстанавливать `backstack`-и с помощью методов `saveBackStack(String)` и `restoreBackStack(String)`.
+-имена, указанные в `saveBackStack` и `restoreBackStack`, должны совпадать с именами, указанными в `addToBackStack`. При вызове `saveBackStack`, `FragmentManager` проходит по всему своему `backstack`-у и собирает все транзакции по указанному имени, после чего сохраняет их в `HashMap`, используя имя и ключ.
+
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q13 Как организовать взаимодействие `Activity` и `Fragment`?
+ 
+    1.При помощи интерфейса. Переменная интерфейсного типа должна быть объявлена внутри фрагмента, а в активити этот интерфейс должент быть реализован. Внутри метода onAttach() можно активити привести к интерфейсному типу и работать с ней.
+    
+    2. Через ViewModel 
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q14 Как передать параметры во `Fragment`?
+
+ При помощи объекта `Bundle` и метода `setArguments`
+
+  ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q15 Почему нельзя передавать параметры в конструктор `Fragment`-а?
+
+  Потому что при пересоздании фрагмента будет вызван его конструктор без параметров. Если такого конструктора нет, то приложение упадет, а если есть, то переданные ранее параметры не сохранятся.
+
+  ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q16 Для чего метод requireActivity()?
+  Служит для передачи результатов между фрагментами.
+
+ ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q17 Как определить скрыт ли на данный момент фрагмент?
+
+  ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q18 Фрагмент является налседником Context?
+  Не является!
+
+   ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q19 Что происходит с фрагментом при повороте экрана?
+
+   При повороте `Activity-host` (Activity которое является родителем для фрагмента) уничтожается. В тот момент когда этот процесс происходит `FragmentManager` отвечает за уничтожение дочернего фрагмента. `FragmentManager` запускает методы угасающего жизненного цикла фрагмента: 
+   - `onPause()` 
+   - `onStop()` 
+   - `onDestroy()`
+
+  При изменении конфигурации `FragmentManager` уничтожает и заново собирает представление фрагментов. Это происходит из соображений что в новой конфигурации могут потребоваться новые ресурсы. На случай, если для нового варианта существуют более подходящие ресурсы, представление строится «с нуля».
+
+  ### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Q20 Для чего нужен метод `Fragment.setRetainInstance()`?
+
+  Метод `setRetainInstance(boolean)` является частью Fragment API фреймворка Android. Он используется для того, чтобы указать системе, сохранять ли текущий фрагмент при повторном создании `Activity` (например, при изменении конфигурации, таком как поворот).
+
+  Когда вы вызываете `setRetainInstance(true)` для фрагмента, это означает, что фрагмент не будет уничтожен вместе со своей родительской активностью при изменении конфигурации. Вместо этого он будет сохранен и повторно присоединен к новому экземпляру активности после завершения изменения. Это может быть особенно полезно для сохранения состояний асинхронных задач или данных, которые были загружены и которые вы не хотите перезагружать или перевычислять при ротации.
+
+  Однако важно отметить, что setRetainInstance имеет свои ограничения и может привести к утечке памяти, если вы не будете внимательно относиться к управлению ссылками на контекст или другие объекты во фрагменте. Кроме того, он помогает только при изменении конфигурации, а не в тех случаях, когда активность уничтожается по другим причинам, например, когда пользователь нажимает кнопку "назад" или когда система уничтожает активность из-за нехватки памяти.
+
+  Для решения сохранения данных лучше использовать ViewModel и LiveData (из компонентов архитектуры Android) для более чистой и безопасной обработки изменений конфигурации. ViewModel переживает изменения конфигурации, поэтому в ней могут храниться данные, которые в противном случае вы бы сохранили с помощью сохраненного фрагмента.
+
+  Вот базовый пример использования ViewModel для сохранения данных:
+
+  ```kotlin
+
+class MyViewModel : ViewModel() {
+    private val data = MutableLiveData<String>()
+    fun getData(): LiveData<String> {
+        return data
+    }
+    fun loadData() {
+        
+    }
+}
+
+class MyActivity : AppCompatActivity() {
+    private lateinit var viewModel: MyViewModel
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        
+        viewModel = ViewModelProvider(this).get(MyViewModel::class.java)
+        viewModel.getData().observe(this, { data ->
+            
+        })
+        if (savedInstanceState == null) {
+            
+            viewModel.loadData()
+        }
+    }
+}
+  ```
+
+## Другое
+
+- Разница между Serializable и Parcelable
+  - В первом используется рефлексия, довольно медленный процесс, однако разработчику нужно писать меньше кода. В Parcelable мы описываем только те вещи, которые нужно сериализовать, из-за чего кода становится больше. 
+
+- Виды Intent-ов
+  - **Implicit** (неявный) Вызываете системный интент: отправить СМС, позвонить, открыть карты и так далее
+  - **Explicit** (явный) Вызов других активити внутри приложения
+  - **Sticky** Интент, который остаётся после завершения бродкаста. Например, при подписке на `ACTION_BATTERY_CHANGED`, мы получим последний посланный интент. Поэтому, если нам нужно только текущее состояние батареи, слушать дальнейшие бродкасты не обязательно. 
+  - **Pending** Интент, который может быть исполнен в будущем на правах вашего приложения 
+
+- Может ли приложение работать в разных процессах? Зачем это нужно? Как можно организовать межпроцессорное взаимодействие?
+  - Может. Для частей приложения (активити, сервисы, бродкасты и контент провайдеры) надо указать флаг process. 
+  - +: Получаем больше памяти. Не всё приложение при недостатке памяти будет убито. 
+  - -: Поскольку каждый процесс живёт в отдельном инстансе Дальвика, делиться информацией сложно. Для этого используются AIDL, интенты, handler-ы, messenger-ы
+
+- Из-за чего возникает ошибка Application Not Responding (ANR)
+  - Когда UI не отвечает несколько секунд. Случается обычно из-за блокированного главного треда.
+
+- Как обнаружить ANR?
+```kotlin
+class App : Application() {
+
+    var tick = 0 % Integer.MAX_VALUE
+
+    override fun onCreate() {
+        super.onCreate()
+
+        val handler = Handler(mainLooper)
+
+        thread {
+            while (true) {
+                val lastTick = tick + 1
+                handler.post { tick += 1 }
+                TimeUnit.SECONDS.sleep(5)
+
+                if (lastTick != tick)
+                    Log.d("APP", "ANR")
+            }
+        }
+
+    }
+}
+```
+
+## Inline-функции
+
+- Зачем в котлине ключевое слово `inline`
+  - В Котлине функции рассматриваются как любые другие значения: они могут быть переданы в и возвращены из методов, сохранены в переменные или в структуры данных. Чтобы поддержать это, Котлин использует семейство функциональных типов. Тогда, чтобы работать с `лямбдами`, Котлин создаёт объекты, реализующие интерфейсы `Function0`, `Function1` и так далее.
+  - Когда в лямбде нет замыкания (грубо говоря: из лямбды не вызываются переменные и методы, которые не лежат внутри самой лямбды), для её реализации компилятор создаёт синглтон. Но для лямбды с замыканием компилятор вынужен создавать инстанс для каждого вызова лямбды. Если лямбда вызывается в цикле, это может даже привести к OOM (нехватке памяти).
+  - В таком случае на помощь приходит ключевое слово `inline`: оно говорит компилятору, что содержимое лямбды нужно встроить в место её вызова, как будто мы написали код не внутри лямбды, а прямо в теле метода. 
+
+- Для чего нужно ключевое слово `reified`
+  - В Java существует такая концепция, как Type Erasure — стирание типов. Коротко говоря, это проблема, возникающая при работе с дженериками. Из-за неё, например, нельзя сделать проверку типа `new ArrayList<String>() instanceof List<String>`: в рантайме джава-машина не знает, какие конкретно типы лежат внутри дженерика. 
+  - Поскольку в Андроиде Котлин использует рантайм Джавы, проблема остаётся: мы не можем проверить, что `arrayListOf<String>() is List<String>`. 
+  - Но используя `inline` функции, мы можем избежать стирания типов с помощью применения модификатора `reified` к дженерику: 
+    ```kotlin
+    inline fun <reified T> myGenericFunction(value: T): T {...}
+    ```
+- `crossinline` и `noinline`
+  - Поскольку мы встраиваем код лямбды на место вызова, `return`, написанный в лямбде, закончит выполнение не лямбды, а всей функции. Когда нам это не нужно, мы можем пометить лямбда-параметр функции как `crossinline`, что запретит нелокальные `return`ы.
+    ```kotlin
+    inline fun function(crossinline nonLocalReturnBlockedLambda: () -> Unit) {...}
+    ```
+  - Порой в inline функции нам нужно не вызвать лямбду на месте, а передать дальше, в другой метод. Тогда лямбда-параметр можно пометить как `noinline`, и он не будет встраиваться в место вызова. 
+    ```kotlin
+    inline fun parameterPassedToOtherInlineFunction(lambda1: () -> Unit, noinline lambda2: () -> Boolean) {
+        // эта лямбда встроится
+        lambda1.invoke()
+        // а эта останется лямбдой и будет передана в другой метод
+        someNonInlinedLambdaConsumingFunction(lambda2)
+    }
+    ```
 
 ###
 
