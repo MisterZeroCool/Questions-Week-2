@@ -32,7 +32,7 @@
    - [Q16](#q16) Почему нельзя передавать параметры в конструктор `Fragment`-а?
    - [Q17](#q17) Для чего метод requireActivity()?
    - [Q18](#q18) Как определить скрыт ли на данный момент фрагмент?
-   - [Q19](#q19) Фрагмент является налседником Context?
+   - [Q19](#q19) Фрагмент является наследником Context?
    - [Q20](#q20) Что происходит с фрагментом при повороте экрана?
    - [Q21](#q21) Для чего нужен метод `Fragment.setRetainInstance()`?
  
@@ -448,7 +448,7 @@ class MainActivity : AppCompatActivity() {
 [Содержание](#содержание)
 
   ### Q19<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
-  ### Фрагмент является налседником Context?
+  ### Фрагмент является наследником Context?
   Не является!
   
 [Содержание](#содержание)
