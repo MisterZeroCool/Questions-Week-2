@@ -245,6 +245,8 @@ findFragmentById() принимает параметром id фрагмента
  ### Q2<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Как создать Fragment?
  Чтобы создать `Fragment` необходимо создать класс наследующий `Fragment` и переопределить в нем метод `onCreateView`, или можно создать класс наследующий `Fragment AndroidX` и передать в базовый конструктор (конструктор родителя) ресурс макета (layout).
+ 
+[Содержание](#содержание)
 
  ### Q3<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px"> 
  ### Расскажите что такое `FragmentManager`?
@@ -255,6 +257,8 @@ findFragmentById() принимает параметром id фрагмента
  - замена
 
  А также добавление их в backStack.
+ 
+[Содержание](#содержание)
 
  ### Q4<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px"> 
  ### Расскажите про способы добавления и переключения фрагментов.
@@ -267,6 +271,8 @@ findFragmentById() принимает параметром id фрагмента
 
 `FragmentManager` начинает транзакцию и возвращает объект `FragmentTransaction` вызовом метода `beginTransaction()`.
 
+[Содержание](#содержание)
+
 
  ### Q5<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Расскажите какие методы есть у класса `FragmentTransaction`.
@@ -276,12 +282,16 @@ findFragmentById() принимает параметром id фрагмента
 - `hide`- делает фрагмент невидимым.
 - `show`- отображает фрагмент.
 
+[Содержание](#содержание)
+
 ### Q6<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
 ### Как работать с бэкстэком?
 
 -для работы с бэкстеком используются следующие методы:
 - `addToBackStack`-добавляет транзакцию в Back Stack. Это значит, что когда пользователь нажмет Back, транзакция откатится. Применяется ко всем операциям в транзакции.
 - `popBackStack`-удаляет транзакцию с верхушки бэкстэка, возвращает `true`, если бэкстэк хранил хотя бы одну транзакцию.
+
+[Содержание](#содержание)
 
  ### Q7<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Как отобразить фрагмент на `Activity`?
@@ -321,12 +331,16 @@ class MainActivity : AppCompatActivity() {
 
 - `beginTransaction` - это метод используется для добавления, замены или удаления фрагментов.
 
+[Содержание](#содержание)
+
  ### Q8<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Как получить ссылку на фрагмент из `Activity`?
 
  Системное API предоставляет два метода для поиска и получения фрагмента внутри активити:
  - `findFragmentByTag()` принимает параметром тег, который передается в методе `add()` или `replace()` или в XML в элементе `FragmentContainerView`. 
  - `findFragmentById()` принимает параметром `id` фрагмента.
+
+[Содержание](#содержание)
 
  ### Q9<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Завершающие методы `FragmentTransaction`
@@ -335,11 +349,15 @@ class MainActivity : AppCompatActivity() {
 - `commitNow` - противоположность commit. Является синхронным, т.е. транзакция выполняется во время вызова метода. При работе с данным методом нельзя использовать `addToBackStack`.
 - `commitAllowingStateLoss` - делает то же, что и метод `commit`, но говорит системе, что мы готовы к потере состояния и исключение бросать не нужно. Замалчивает, а не решает проблему. Является асинхронным. Не рекомендуется использовать.
 
+[Содержание](#содержание)
+
  ### Q10<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Что за методы `parentFragmentManager`, `childFragmentManager`?
 
  - `parentFragmentManager` - `FragmentManager` родителя.
 - `childFragmentManager` - `FragmentManager` текущего фрагмента.
+
+[Содержание](#содержание)
 
  ### Q11<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Опишите жизненный цикл фрагмента
@@ -368,6 +386,8 @@ class MainActivity : AppCompatActivity() {
 - `onDestroy()` – уничтожает фрагмент.
 - `onDetach()` – вызывается, когда фрагмент удаляется из FragmentManager и открепляется от активити.
 
+[Содержание](#содержание)
+
  ### Q12<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px"> 
  ### FragmentResultApi
 
@@ -379,6 +399,8 @@ class MainActivity : AppCompatActivity() {
 
 Если какой-либо фрагмент подписывается на результат методом `setFragmentResultListener` после того, как отправляющий фрагмент вызовет `setFragmentResult`, то он немедленно получит результат. Каждую связку `"Key+Result(Bundle)"` фрагмент получает только 1 раз. Фрагменты которые находятся в бек стеке получат результат только после того как перейдут в состояние `STARTED`. После того как фрагмент перейдет в состояние `DESTROYED` мы больше не сможем подписываться на `ResultListener`.
 
+[Содержание](#содержание)
+
  ### Q13<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Multi-backstack
 Используется для сохранения `backstack` при переходах между вкладками. Для работы необходимо:
@@ -387,6 +409,8 @@ class MainActivity : AppCompatActivity() {
 - под каждый `parentFragment` добавить таб (Tablayout) и при переходе внутри этих фрагментов, будем сохранять и восстанавливать `backstack`-и с помощью методов `saveBackStack(String)` и `restoreBackStack(String)`.
 -имена, указанные в `saveBackStack` и `restoreBackStack`, должны совпадать с именами, указанными в `addToBackStack`. При вызове `saveBackStack`, `FragmentManager` проходит по всему своему `backstack`-у и собирает все транзакции по указанному имени, после чего сохраняет их в `HashMap`, используя имя и ключ.
 
+[Содержание](#содержание)
+
 
  ### Q14<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Как организовать взаимодействие `Activity` и `Fragment`?
@@ -394,27 +418,40 @@ class MainActivity : AppCompatActivity() {
     1.При помощи интерфейса. Переменная интерфейсного типа должна быть объявлена внутри фрагмента, а в активити этот интерфейс должент быть реализован. Внутри метода onAttach() можно активити привести к интерфейсному типу и работать с ней.
     
     2. Через ViewModel 
+  
+[Содержание](#содержание)
 
  ### Q15<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Как передать параметры во `Fragment`?
 
  При помощи объекта `Bundle` и метода `setArguments`
+ 
+[Содержание](#содержание)
 
   ### Q16<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
   ### Почему нельзя передавать параметры в конструктор `Fragment`-а?
 
   Потому что при пересоздании фрагмента будет вызван его конструктор без параметров. Если такого конструктора нет, то приложение упадет, а если есть, то переданные ранее параметры не сохранятся.
 
+[Содержание](#содержание)
+
   ### Q17<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
   ### Для чего метод requireActivity()?
   Служит для передачи результатов между фрагментами.
+  
+[Содержание](#содержание)
 
  ### Q18<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Как определить скрыт ли на данный момент фрагмент?
 
+ 
+[Содержание](#содержание)
+
   ### Q19<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
   ### Фрагмент является налседником Context?
   Не является!
+  
+[Содержание](#содержание)
 
    ### Q20<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
    ### Что происходит с фрагментом при повороте экрана?
@@ -425,6 +462,8 @@ class MainActivity : AppCompatActivity() {
    - `onDestroy()`
 
   При изменении конфигурации `FragmentManager` уничтожает и заново собирает представление фрагментов. Это происходит из соображений что в новой конфигурации могут потребоваться новые ресурсы. На случай, если для нового варианта существуют более подходящие ресурсы, представление строится «с нуля».
+  
+[Содержание](#содержание)
 
   ### Q21<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
   ### Для чего нужен метод `Fragment.setRetainInstance()`?
@@ -468,6 +507,8 @@ class MyActivity : AppCompatActivity() {
     }
 }
   ```
+
+[Содержание](#содержание)
 
 ## Другое
 
