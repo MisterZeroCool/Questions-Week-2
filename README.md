@@ -2,15 +2,35 @@
 # Содержание
 
 - [RecyclerView](#recyclerview)
-  - [AV Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?](#av)
-  - [AV asd](#av_asd)    
+  - [Q1.1](#q1.1)Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?
+  - [Q1.2](#q1.2)    
   - [Разница от ListView?](#разница)
   - [Чем отличается LinearLayout от RecycleView если оба использовать как отображение списка?](#чем-отличается-linearlayout-от-recycleView-если-оба-использовать-как-отображение-списка?)
   - [Паттерны Adapter и ViewHolder](#Паттерны-Adapter-и-ViewHolder)
   - [diffutil](#diffutil)
   - [delegate RV](#delegate-RV)
   - Server Driven UI
-  - 
+   - [Q1](#q1) Что такое фрагмент и для чего он нужен?
+   - [Q2](#q2) Как создать Fragment?
+   - [Q3](#q3) Расскажите что такое `FragmentManager`?
+   - [Q4](#q4) Расскажите про способы добавления и переключения фрагментов.
+   - [Q5](#q5) Расскажите какие методы есть у класса `FragmentTransaction`.
+   - [Q6](#q6) Как работать с бэкстэком?
+   - [Q7](#q7) Как отобразить фрагмент на `Activity`?
+   - [Q8](#q8) Как получить ссылку на фрагмент из `Activity`?
+   - [Q9](#q9) Завершающие методы `FragmentTransaction`.
+   - [Q10](#q10) Что за методы `parentFragmentManager`, `childFragmentManager`?
+   - [Q11](#q11) Опишите жизненный цикл фрагмента
+   - [Q12](#q12) FragmentResultApi
+   - [Q13](#q13) Multi-backstack
+   - [Q14](#q14) Как организовать взаимодействие `Activity` и `Fragment`?
+   - [Q15](#q15) Как передать параметры во `Fragment`?
+   - [Q16](#q16) Почему нельзя передавать параметры в конструктор `Fragment`-а?
+   - [Q17](#q17) Для чего метод requireActivity()?
+   - [Q18](#q18) Как определить скрыт ли на данный момент фрагмент?
+   - [Q19](#q19) Фрагмент является наследником Context?
+   - [Q20](#q20) Что происходит с фрагментом при повороте экрана?
+   - [Q21](#q21) Для чего нужен метод `Fragment.setRetainInstance()`?
   
 - [Fragments](#fragments)
 
@@ -43,11 +63,13 @@
 
 
 # RecyclerView<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
-
+### #Q1.1
+### Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?
 Android RecyclerView — это компонент пользовательского интерфейса, предназначенный для эффективного отображения больших наборов данных. Он повышает производительность за счет повторного использования представлений, уменьшения использования памяти и увеличения скорости прокрутки.
 
 
-### Основные компоненты RecyclerView?
+
+### Q1.2 Основные компоненты RecyclerView?
 Для корректной работы RecyclerView необходимо реализовать следующие компоненты:
 
 + RecyclerView, который необходимо добавить в макет нашего Activity;
