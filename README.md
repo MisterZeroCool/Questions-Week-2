@@ -25,10 +25,10 @@
    - [Q9](#q9) Завершающие методы `FragmentTransaction`.
    - [Q10](#q10) Что за методы `parentFragmentManager`, `childFragmentManager`?
    - [Q11](#q11) Опишите жизненный цикл фрагмента
-   - [Q12](#q12) Опишите жизненный цикл фрагмента
-   - [Q13](#q13) FragmentResultApi
-   - [Q14](#q14) Как организовать взаимодействие `Activity` и `Fragment`?
-   - [Q15](#q15) Как передать параметры во `Fragment`?
+   - [Q12](#q12) FragmentResultApi
+   - [Q13](#q13) Как организовать взаимодействие `Activity` и `Fragment`?
+   - [Q14](#q14) Как передать параметры во `Fragment`?
+   - [Q15](#q15) 
    - [Q16](#q16)
    - [Q17](#q17)
    - [Q18](#q18) 
@@ -240,7 +240,7 @@ findFragmentById() принимает параметром id фрагмента
 
 `Fragment` —  используется для отображения части UI на экране. Фрагмент создается внутри активити или внутри другого фрагмента. Фрагмент является модульным компонентом и один и тот же фрагмент можно встроить в две разные активности. Класс-наследник класса Fragment должен иметь дефолтный конструктор без параметров. Система использует этот конструктор при пересоздании фрагмента.
 
- ### Q2 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
+ ### Q2<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Как создать Fragment?
  Чтобы создать `Fragment` необходимо создать класс наследующий `Fragment` и переопределить в нем метод `onCreateView`, или можно создать класс наследующий `Fragment AndroidX` и передать в базовый конструктор (конструктор родителя) ресурс макета (layout).
 
