@@ -2,6 +2,7 @@
 
 # Содержание
 # [RecyclerView](#recyclerview)
+
    - [Q1a](#q1a) Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?  
    - [Q2a](#q2a) Основные компоненты RecyclerView?
    - [Q3a](#q3a) Разница от ListView?
@@ -21,7 +22,8 @@
    - [Q17a](#q17a) DiffUtil
    - [Q18a](#q18a) AsyncListDiffer
  
-  # [Fragments](#fragments)
+# [Fragments](#fragments)
+
    - [Q19a](#q19a) Что такое фрагмент и для чего он нужен?
    - [Q20a](#q20a) Как создать Fragment?
    - [Q21a](#q21a) Расскажите что такое `FragmentManager`?
