@@ -1,7 +1,7 @@
 # <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">Вопросы: Неделя 2!<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
 
 # Содержание
-- [RecyclerView](#recyclerview)
+# [RecyclerView](#recyclerview)
    - [Q1a](#q1a) Назначение и ключевые функции Android RecyclerView и почему это важно для разработки современных приложений для Android?  
    - [Q2a](#q2a) Основные компоненты RecyclerView?
    - [Q3a](#q3a) Разница от ListView?
@@ -21,7 +21,7 @@
    - [Q17a](#q17a) DiffUtil
    - [Q18a](#q18a) AsyncListDiffer
  
-  - [Fragments](#fragments)
+  # [Fragments](#fragments)
    - [Q19a](#q19a) Что такое фрагмент и для чего он нужен?
    - [Q20a](#q20a) Как создать Fragment?
    - [Q21a](#q21a) Расскажите что такое `FragmentManager`?
