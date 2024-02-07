@@ -149,20 +149,20 @@ private fun showList(list: List(ShopItem>){
 
 # Fragments
  
- ### Q1<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px"> 
+ ### Q19a<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px"> 
  ### Что такое фрагмент и для чего он нужен?
 
 `Fragment` —  используется для отображения части UI на экране. Фрагмент создается внутри активити или внутри другого фрагмента. Фрагмент является модульным компонентом и один и тот же фрагмент можно встроить в две разные активности. Класс-наследник класса Fragment должен иметь дефолтный конструктор без параметров. Система использует этот конструктор при пересоздании фрагмента.
 
 [Содержание](#содержание)
 
- ### Q2<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
+ ### Q20a<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px">
  ### Как создать Fragment?
  Чтобы создать `Fragment` необходимо создать класс наследующий `Fragment` и переопределить в нем метод `onCreateView`, или можно создать класс наследующий `Fragment AndroidX` и передать в базовый конструктор (конструктор родителя) ресурс макета (layout).
  
 [Содержание](#содержание)
 
- ### Q3<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px"> 
+ ### Q21a<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnluOG4xdGlpeWxwYnFhM3Bjc2Z3dzN5eDhhaThza2N0Ym9wOGUxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zECASgodRMZ5QAbRao/giphy.gif" width="30px"> 
  ### Расскажите что такое `FragmentManager`?
  Это класс, отвечающий за выполнение действий над фрагментами нашего приложения, таких как:
 
@@ -498,19 +498,5 @@ class App : Application() {
     }
     ```
 
-###
 
-###
-###
-###
-###
-###
-###
-###
-###
-###
-###
-###
-###
-###
-###
+
